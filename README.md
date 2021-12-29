@@ -1,11 +1,16 @@
 <!-- omit in toc -->
 # ![AllTrans](https://raw.githubusercontent.com/akhilkedia/AllTrans/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)AllTrans™ - Completely Translate Apps
 
-Like Chrome translation of webpages, but for Android apps.
+Like Chrome's translation of webpages, but for Android apps. It replaces **ALL TEXT IN AN APP** from one language to another at runtime.
 
-[![LicenseGPLv3](https://img.shields.io/badge/License-GPL%20v3-green.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UY6TVJXST724J) ![GitHub All Releases](https://img.shields.io/github/downloads/akhilkedia/AllTrans/total?style=social)
+Say for example an app is in German. A user selects the app name, and the required language conversion (say German to English).
+Then whenever the user uses the required app, all the text, **ANYWHERE** in the app, are replaced by their English equivalents.
+This is something similar to the way Google Translate works in Chrome.
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=akhil.alltrans&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+Works with Android 11!
+
+[![LicenseGPLv3](https://img.shields.io/badge/License-GPL%20v3-green.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UY6TVJXST724J) ![GitHub All Releases](https://img.shields.io/github/downloads/akhilkedia/AllTrans/total?style=social) [![Play](https://img.shields.io/endpoint?color=green&logo=google-play&logoColor=green&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dakhil.alltrans%26l%3DInstalls%26m%3D%24installs)](https://play.google.com/store/apps/details?id=akhil.alltrans)
+
 
 ## Table of Contents
 
@@ -69,10 +74,11 @@ A video (in English) showing how to use AllTrans by Gadget Hacks on Youtube [htt
 
 ## How to install AllTrans
 
-1. This application requires android version 4.1 or later. You probably already have it. (Android JellyBean or later - so far JellyBean, Kitkat, Lollipop, MarshMallow, Nougat, Oreo, Pie and Q.).
+1. This application requires android version 4.4 or later. You probably already have it. (Android KitKat or later - so far Kitkat, Lollipop, MarshMallow, Nougat, Oreo, Pie, Q, R.).
 1. Make sure you have [Xposed Framework](https://forum.xda-developers.com/showthread.php?t=3034811) installed and running.
    - [LSPosed](https://github.com/LSPosed/LSPosed) and [EdXposed](https://forum.xda-developers.com/xposed/development/official-edxposed-successor-xposed-t4070199) are recommended.
-1. Install the latest version of AllTrans from [Google Play Store](https://play.google.com/store/apps/details?id=akhil.alltrans). You can alternatively download the apk from [Xposed Module Repository](http://repo.xposed.info/module/akhil.alltrans)
+   - **If you do not have an unlocked bootloader or Magisk, AllTrans is now fully compatible with [VirtualXposed](https://virtualxposed.com/) and [Taichi](https://github.com/taichi-framework/TaiChi/releases), so AllTrans can now be used on all devices!!! No need of unlocked bootloader, no need of Magisk, etc.!**
+1. Install the latest version of AllTrans from [Google Play Store](https://play.google.com/store/apps/details?id=akhil.alltrans). You can alternatively download the apk from [Xposed Module Repository](http://repo.xposed.info/module/akhil.alltrans) or from LSPosed Repository inside LSPosed app.
 1. Reboot your phone.
 
 ## How to use AllTrans
@@ -125,7 +131,8 @@ A previous version of this application encouraged use of Yandex API keys. Yandex
 ### No app is being translated in any app
 
 - If no app is being translated, check if "AllTrans" is enabled in "Xposed Installer -> Modules"
-  - If you are using "LSPosed", make sure "System Framework" and "Settings Storage", and the to-be-translated-app is enabled in LSPosed for AllTrans.
+  - If you are using "Taichi", check "AllTrans" is enabled in "+ -> Manage Modules".
+  - If you are using "Taichi"/"VirtualXposed", also make sure the app to be translated in installed using "Taichi"/"VirtualXposed".
 - If you are using "Google" to translate (the default), make sure you have set "Translate From Langauge" and "Translate To Language" and downloaded the translation files.
 - If you are using "Microsoft" to translate, make sure "Microsoft Subscription Key" is correct, and the "Resource Region" setting is "Global" when you made the key.
 
