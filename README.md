@@ -7,31 +7,33 @@ Say for example an app is in German. A user selects the app name, and the requir
 Then whenever the user uses the required app, all the text, **ANYWHERE** in the app, are replaced by their English equivalents.
 This is something similar to the way Google Translate works in Chrome.
 
-Works with Android 11!
+Works with Android 13!
 
 [![LicenseGPLv3](https://img.shields.io/badge/License-GPL%20v3-green.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UY6TVJXST724J) ![GitHub All Releases](https://img.shields.io/github/downloads/akhilkedia/AllTrans/total?style=social) [![Play](https://img.shields.io/endpoint?color=green&logo=google-play&logoColor=green&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dakhil.alltrans%26l%3DInstalls%26m%3D%24installs)](https://play.google.com/store/apps/details?id=akhil.alltrans)
 
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=akhil.alltrans&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [What AllTrans does](#what-alltrans-does)
 - [ScreenShots and Videos](#screenshots-and-videos)
-	- [Below are some screenshots of AllTrans translating apps from Korean to English](#below-are-some-screenshots-of-alltrans-translating-apps-from-korean-to-english)
-	- [Below are some of the screenshots of AllTrans app](#below-are-some-of-the-screenshots-of-alltrans-app)
-	- [Videos](#videos)
+  - [Below are some screenshots of AllTrans translating apps from Korean to English](#below-are-some-screenshots-of-alltrans-translating-apps-from-korean-to-english)
+  - [Below are some of the screenshots of AllTrans app](#below-are-some-of-the-screenshots-of-alltrans-app)
+  - [Videos](#videos)
 - [How to install AllTrans](#how-to-install-alltrans)
 - [How to use AllTrans](#how-to-use-alltrans)
+  - [Note - If you are using VirtualXposed or Taichi](#note---if-you-are-using-virtualxposed-or-taichi)
 - [How to get Microsoft Azure Translate Key](#how-to-get-microsoft-azure-translate-key)
 - [Note - No New Yandex Translate Keys](#note---no-new-yandex-translate-keys)
 - [TroubleShooting](#troubleshooting)
-	- [No app is being translated in any app](#no-app-is-being-translated-in-any-app)
-	- [Translated app is stuck in opening screen](#translated-app-is-stuck-in-opening-screen)
-	- [The Translated app is "Force Close"](#the-translated-app-is-force-close)
-	- [Other apps are being translated, but some particular app is not](#other-apps-are-being-translated-but-some-particular-app-is-not)
-	- [A game app is not being translated](#a-game-app-is-not-being-translated)
-	- [The app "Telegram" is not being translated](#the-app-telegram-is-not-being-translated)
-	- [If you still have problems like "Force Close" or parts of an app not being translated](#if-you-still-have-problems-like-force-close-or-parts-of-an-app-not-being-translated)
+  - [No app is being translated in any app](#no-app-is-being-translated-in-any-app)
+  - [Translated app is stuck in opening screen](#translated-app-is-stuck-in-opening-screen)
+  - [The Translated app is "Force Close"](#the-translated-app-is-force-close)
+  - [Other apps are being translated, but some particular app is not](#other-apps-are-being-translated-but-some-particular-app-is-not)
+  - [A game app is not being translated](#a-game-app-is-not-being-translated)
+  - [The app "Telegram" is not being translated](#the-app-telegram-is-not-being-translated)
+  - [If you still have problems like "Force Close" or parts of an app not being translated](#if-you-still-have-problems-like-force-close-or-parts-of-an-app-not-being-translated)
 - [Featured In](#featured-in)
 - [Donations](#donations)
 - [License](#license)
@@ -89,6 +91,12 @@ A video (in English) showing how to use AllTrans by Gadget Hacks on Youtube [htt
 1. In the "Apps to Translate" tab, find the app you want to translate, click the checkbox next to it.
 1. Close and restart the app you want translated - it should be translated!
 
+### Note - If you are using VirtualXposed or Taichi
+
+- This application will only work for apps installed inside Taichi or VirtualXposed, not for other apps. This means it will not work for any system apps.
+**- Sometimes some apps will fail to install/run inside Taichi/VirtualXposed. This is not a problem of AllTrans, just some limitations of Taichi/VirtualXposed.**
+- Some apps work on Taichi, some work on VirtualXposed, some on neither. I recommend you try using both if some app does not install/open inside VirtualXposed/Taichi.
+
 ## How to get Microsoft Azure Translate Key
 
 If you use Microsoft Translate instead of Google, you **need** you to sign up for **free** a key from Microsoft Translate. See instructions below on how to get the keys.
@@ -131,6 +139,7 @@ A previous version of this application encouraged use of Yandex API keys. Yandex
 ### No app is being translated in any app
 
 - If no app is being translated, check if "AllTrans" is enabled in "Xposed Installer -> Modules"
+  - If you are using "LSPosed", make sure "System Framework" and "Settings Storage", and the to-be-translated-app is enabled in LSPosed for AllTrans.
   - If you are using "Taichi", check "AllTrans" is enabled in "+ -> Manage Modules".
   - If you are using "Taichi"/"VirtualXposed", also make sure the app to be translated in installed using "Taichi"/"VirtualXposed".
 - If you are using "Google" to translate (the default), make sure you have set "Translate From Langauge" and "Translate To Language" and downloaded the translation files.
